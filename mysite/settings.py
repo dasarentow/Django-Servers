@@ -41,7 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+       'myusers.apps.MyusersConfig',
+      'chat.apps.ChatConfig',
 ]
+
+
+AUTH_USER_MODEL = 'myusers.NewUser'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
