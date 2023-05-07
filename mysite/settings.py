@@ -42,12 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-       'myusers.apps.MyusersConfig',
+    'myusers.apps.MyusersConfig',
       'chat.apps.ChatConfig',
 ]
 
 
-AUTH_USER_MODEL = 'myusers.NewUser'
+# AUTH_USER_MODEL = 'myusers.NewUser'
 
 
 MIDDLEWARE = [
