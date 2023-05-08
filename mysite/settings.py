@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 #       'chat.apps.ChatConfig',
 # ]
 
-
+]
 # AUTH_USER_MODEL = 'myusers.NewUser'
 
 
