@@ -34,11 +34,24 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://django-server-production-dac4.up.railway.app",
+    "https://react-frontend-production-4f21.up.railway.app",
+    "https://react-frontend-production-4f21.up.railway.app/",
+
+    'http://localhost:8000',
+    'http://localhost:5001',
+    'http://localhost:3000',
+    'http://localhost:5173',
+]
+
 # FORM SUBMISSION
 # Comment out the following line and place your railway URL, and your production URL in the array.
 CSRF_TRUSTED_ORIGINS = ["https://django-server-production-dac4.up.railway.app",
-                        "https://react-frontend-production-4f21.up.railway.app"
-                        
+                        "https://react-frontend-production-4f21.up.railway.app",
+                        "https://react-frontend-production-4f21.up.railway.app/"   
                         ]
 
 # Application definition
@@ -72,6 +85,7 @@ AUTH_USER_MODEL = 'myusers.NewUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     "corsheaders.middleware.CorsMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
