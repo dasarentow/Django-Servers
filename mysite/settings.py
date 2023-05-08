@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework.authtoken',
     'djoser',
-    'django_extensions',
+   
     'rest_framework_swagger',
 
 ]
