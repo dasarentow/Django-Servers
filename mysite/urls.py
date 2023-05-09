@@ -71,7 +71,7 @@ urlpatterns = [
          ), name='openapi-schema'),
     # apps
     path('api/', include('chat.urls', namespace='chat')),
-
+   path('api/', include('dsapps.urls', namespace='dsapps')),
 
 
 

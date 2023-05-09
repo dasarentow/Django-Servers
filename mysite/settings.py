@@ -67,6 +67,8 @@ INSTALLED_APPS = [
     
     'myusers.apps.MyusersConfig',
       'chat.apps.ChatConfig',
+        'dsapps.apps.DsappsConfig',
+      
 
 
     'rest_framework',
