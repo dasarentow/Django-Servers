@@ -8,7 +8,11 @@ from django.urls import reverse, reverse_lazy
 from django_extensions.db.fields import AutoSlugField
 from django.contrib.auth import get_user_model
 User = get_user_model()
+from django.utils.translation import gettext_lazy as _
 
+
+def upload_to(instance, filename):
+    return 'product/{filename}'.format(filename=filename)
 
 class Tax(models.Model):
     # product_tax = models.ForeignKey(
@@ -67,7 +71,7 @@ class Product(models.Model):
         populate_from=['name', 'category__slug'])
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(upload_to='uploads/', blank=True, null=True)
+    image = models.ImageField( _("Image"), upload_to=upload_to, blank=True, null=True)
     thumbnail = models.ImageField(upload_to='uploads/', blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
     countInStock = models.PositiveIntegerField(default=0)
