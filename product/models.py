@@ -52,7 +52,7 @@ class Category(models.Model):
 
     @property
     def endpoints(self):
-        return 'http://127.0.0.1:8000' + reverse_lazy("product:mycategory-detail", kwargs={"pk": self.pk},)
+        return 'https://django-server-production-dac4.up.railway.app' + reverse_lazy("product:mycategory-detail", kwargs={"pk": self.pk},)
 
     def get_discount(self):
         return '2334'
@@ -85,7 +85,7 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return 'http://127.0.0.1:8000' + f'/prd/products/{self.category.slug}/{self.slug}/'
+        return 'https://django-server-production-dac4.up.railway.app' + f'/prd/products/{self.category.slug}/{self.slug}/'
 
     # @property
     # def sale_price(self):
@@ -116,18 +116,18 @@ class Product(models.Model):
 
     def get_image(self):
         if self.image:
-            return 'http://127.0.0.1:8000' + self.image.url
+            return 'https://django-server-production-dac4.up.railway.app' + self.image.url
         return ''
 
     def get_thumbnail(self):
         if self.thumbnail:
-            return 'http://127.0.0.1:8000' + self.thumbnail.url
+            return 'https://django-server-production-dac4.up.railway.app' + self.thumbnail.url
         else:
             if self.image:
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                return 'http://127.0.0.1:8000' + self.thumbnail.url
+                return 'https://django-server-production-dac4.up.railway.app' + self.thumbnail.url
             else:
                 return ''
 
