@@ -54,7 +54,33 @@ CSRF_TRUSTED_ORIGINS = ["https://django-server-production-dac4.up.railway.app",
                         "https://react-frontend-production-4f21.up.railway.app/"   
                         ]
 
+
+
+'''stripe'''
+STRIPE_PUB_KEY = 'pk_test_51LQs56J4Ld6rviALSMOU73EdE3Zbwc8tvPjvqvKdckQvehzF6G0zfKMHvU53BiCh9MjtXgGACFJLgSVRKFBoajB500AgemxmOx'
+STRIPE_SECRET_KEY = 'sk_test_51LQs56J4Ld6rviALOVsWWWhfb6WOhNpPpc7xwoTvyYTSEkVXlNephzKfJwG90oYm9WoqbdLT8v29cHqWki7uB4PW004CH6Kg9S'
+
+STRIPE_PRICE_ID_PREMIUM = 'price_1MdwNcJ4Ld6rviALBGfpD1nb'
+STRIPE_PRICE_ID_EXECUTIVE = 'price_1MdwNcJ4Ld6rviALBGfpD1nb'
+STRIPE_PRICE_ID_SMALL_TEAM = 'price_1LQsOIJ4Ld6rviALnSLsga8Y'
+STRIPE_PRICE_ID_BIG_TEAM = 'price_1LQsPzJ4Ld6rviALlB1zSxbt'
+
+
+STRIPE_WEBHOOK_KEY = 'whsec_iV0qP1UMZEvR53tkDW7rGBE6EgFZ6sxj'
+
+FRONTEND_WEBSITE_SUCCESS_URL = 'https://react-frontend-production-4f21.up.railway.app/crm/thank-you'
+FRONTEND_WEBSITE_CANCEL_URL = 'https://react-frontend-production-4f21.up.railway.app/crm/plan'
+SITE_URL = 'https://react-frontend-production-4f21.up.railway.app/',
+
+
+
+
+
 # Application definition
+
+
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -68,6 +94,12 @@ INSTALLED_APPS = [
     'myusers.apps.MyusersConfig',
       'chat.apps.ChatConfig',
         'dsapps.apps.DsappsConfig',
+        
+    # ecommerce app
+    'product.apps.ProductConfig',
+    'order.apps.OrderConfig',
+    'respay.apps.RespayConfig',
+
       
 
 
