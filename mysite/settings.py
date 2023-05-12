@@ -92,8 +92,8 @@ INSTALLED_APPS = [
      'django_extensions',
     
     'myusers.apps.MyusersConfig',
-      'chat.apps.ChatConfig',
-        'dsapps.apps.DsappsConfig',
+    'chat.apps.ChatConfig',
+    'dsapps.apps.DsappsConfig',
         
     # ecommerce app
     'product.apps.ProductConfig',

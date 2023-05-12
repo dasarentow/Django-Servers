@@ -30,7 +30,7 @@ class Topic(models.Model):
     slug = AutoSlugField(
         populate_from=['topic', 'description'], max_length=1000)
     updated = models.DateTimeField(
-        datetime.datetime.now(), blank=True, null=True, )
+        auto_now=True, blank=True, null=True, )
     created = models.DateTimeField(blank=True, null=True, auto_now_add=True)
     likes = models.IntegerField(default=0)
     load_pic = models.ImageField(
