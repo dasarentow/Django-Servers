@@ -18,6 +18,6 @@ def MySpecialAdmin(model): return type('SubClass'+model.__name__, (admin.ModelAd
 #     list_display = [x.name for x in Lead._meta.fields]
 
 
-# admin.site.register(Post,  MySpecialAdmin(Post))
+admin.site.register(ShippingAddress,  MySpecialAdmin(ShippingAddress))
 admin.site.register(Order,  MySpecialAdmin(Order))
 admin.site.register(OrderItem,  MySpecialAdmin(OrderItem))
